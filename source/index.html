@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Gluttonous Snake"/>
+    <meta property="og:image" content="snake.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="gluttonous snake"/>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container pt-5">
+        <h1 class="title fs-3">Gluttonous Snake</h1>
+        <div class="main">
+            <canvas id="canvas">
+            </canvas>
+            <div class="control">
+                <p class="main-msg mb-3">Press Enter Key or Click Button to Start
+                    <span class="mt-3">
+                        Red apple has more score, <br>and more furious
+                    </span>
+                </p>
+                <a onclick="game.startGame()" href="#" class="start-btn">START</a>
+            </div>
+            <div class="score-table">
+                <p>SCORE<span class="score d-block text-center">0</span></p>
+            </div>
+            <div class="ranking col-lg-6 d-none d-lg-block">
+                <h3 class="text-center fs-5">RANKING</h3>
+                <ul class="ranking-sec w-100 list-unstyled mt-3">
+                    <li class="ranking-item">
+                        <p>PLAYER</p>
+                        <p>350</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="end-game-panel d-none">
+            <p class="feeback">Play again?</p>
+            <p>Score</p>
+            <span class="fs-1 score-board"></span>
+            <label for="#insertRank">Insert Name</label>
+            <input class="my-3" id="insertRank" type="text" placeholder=" 5 char max">
+            <div>
+                <button class="btn skip-btn" onclick="game.closeEndPanel()">SKIP</button>
+                <button class="btn send-btn" onclick="game.updateRank()">SEND</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="all.js"></script>
+</body>
+
+</html>
